@@ -1,5 +1,5 @@
 extends CanvasLayer
-
+@onready var music = $MusicPlayer
 @onready var portrait = $Panel/Portrait
 @onready var speaker_label = $Panel/SpeakerLabel
 @onready var text_label = $Panel/Label
@@ -12,6 +12,7 @@ var current_node = "start"
 func _ready():
 	load_dialogue()
 	show_node()
+	music.play()
 
 func load_dialogue():
 	var file = FileAccess.open("res://dialogue.json", FileAccess.READ)
