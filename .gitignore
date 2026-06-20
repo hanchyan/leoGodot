@@ -1,0 +1,18 @@
+# Godot 4+
+.godot/
+
+# Imported assets
+.import/
+
+# Export templates
+export_presets.cfg
+
+# Mono/C#
+.mono/
+data_*/
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db

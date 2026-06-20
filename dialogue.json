@@ -1,0 +1,49 @@
+{
+  "start": {
+	"speaker": "Old Man",
+	"portrait": "res://portraits/old_man2.png",
+	"text": "Do you enter the cave?",
+	"choices": [
+	  {
+		"text": "Yes",
+		"next": "cave"
+	  },
+	  {
+		"text": "No",
+		"next": "leave"
+	  }
+	]
+  },
+
+  "cave": {
+	"speaker": "Narrator",
+	"portrait": "res://portraits/cave2.png",
+	 
+
+
+	"text": "It's dark inside. Continue?",
+	"choices": [
+	  {
+		"text": "Yes",
+		"next": "treasure"
+	  },
+	  {
+		"text": "No",
+		"next": "leave"
+	  }
+	]
+  },
+
+  "leave": {
+	"speaker": "Narrator",
+	"text": "poo poo",
+	"portrait": "res://portraits/caveExit.png",
+	"choices": []
+  },
+
+  "treasure": {
+	"speaker": "Narrator",
+	"text": "You found treasure!",
+	"choices": []
+  }
+}
