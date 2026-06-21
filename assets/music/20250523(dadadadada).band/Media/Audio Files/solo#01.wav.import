@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://4k4ai1ua7jb"
+path="res://.godot/imported/solo#01.wav-f66cc552e103bcd7abf57118b4cb9d3d.sample"
+
+[deps]
+
+source_file="res://assets/music/20250523(dadadadada).band/Media/Audio Files/solo#01.wav"
+dest_files=["res://.godot/imported/solo#01.wav-f66cc552e103bcd7abf57118b4cb9d3d.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

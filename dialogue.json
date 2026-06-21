@@ -10,7 +10,7 @@
 	  },
 	  {
 		"text": "No",
-		"next": "leave"
+		"next": "leave"	
 	  }
 	]
   },
@@ -19,8 +19,6 @@
 	"speaker": "Narrator",
 	"portrait": "res://portraits/cave2.png",
 	 
-
-
 	"text": "It's dark inside. Continue?",
 	"choices": [
 	  {
@@ -44,6 +42,32 @@
   "treasure": {
 	"speaker": "Narrator",
 	"text": "You found treasure!",
-	"choices": []
-  }
-}
+	"choices": [
+		{
+		"text": "Yes",
+		"next": "crazy"
+	  },
+	  {
+		"text": "No",
+		"next": "leave"
+	  }
+	]
+  }, 
+
+  "crazy": {
+	"speaker": "Narrator",
+	"text": "this shits bananas",
+	"portrait": "res://portraits/crazyAnimation.tres",
+
+	"choices": [
+		{
+		"text": "Yes",
+		"next": "leave"
+	  },
+	  {
+		"text": "No",
+		"next": "leave"
+	  }
+	]
+   }
+ }

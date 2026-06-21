@@ -1,4 +1,5 @@
 extends CanvasLayer
+
 @onready var music = $MusicPlayer
 @onready var portrait = $Panel/Portrait
 @onready var speaker_label = $Panel/SpeakerLabel
@@ -14,21 +15,35 @@ func _ready():
 	show_node()
 	music.play()
 
+
 func load_dialogue():
 	var file = FileAccess.open("res://dialogue.json", FileAccess.READ)
 	var json_text = file.get_as_text()
 	dialogue = JSON.parse_string(json_text)
 
+
 func show_node():
-	
 	var node = dialogue[current_node]
-	
+
 	speaker_label.text = node["speaker"]
 	text_label.text = node["text"]
-	
+
 	if node.has("portrait"):
-		portrait.texture = load(node["portrait"])
+		var resource = load(node["portrait"])
+
+		if resource is SpriteFrames:
+			portrait.sprite_frames = resource
+			portrait.play("idle")
+
+		elif resource is Texture2D:
+			var frames = SpriteFrames.new()
+			frames.add_animation("idle")
+			frames.add_frame("idle", resource)
+			portrait.sprite_frames = frames
+			portrait.play("idle")
+
 		portrait.show()
+
 	else:
 		portrait.hide()
 
@@ -41,6 +56,7 @@ func show_node():
 			button2.text = node["choices"][1]["text"]
 		else:
 			button2.hide()
+
 	else:
 		button1.hide()
 		button2.hide()

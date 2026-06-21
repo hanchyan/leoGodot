@@ -1,0 +1,18 @@
+[gd_resource type="SpriteFrames" format=3 uid="uid://8mhlohmipk70"]
+
+[ext_resource type="Texture2D" uid="uid://0vvrm2svyadq" path="res://portraits/crazyGuy.png" id="1_equws"]
+[ext_resource type="Texture2D" uid="uid://cdu7gevympri" path="res://portraits/crazyGuy2.png" id="2_etj8e"]
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_equws")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_etj8e")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
