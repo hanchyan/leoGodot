@@ -17,7 +17,7 @@
 
   "cave": {
 	"speaker": "Narrator",
-	"portrait": "res://portraits/cave2.png",
+	"portrait": "res://portraits/test.png",
 	 
 	"text": "It's dark inside. Continue?",
 	"choices": [

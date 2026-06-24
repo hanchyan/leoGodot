@@ -6,9 +6,14 @@ extends CanvasLayer
 @onready var text_label = $Panel/Label
 @onready var button1 = $Panel/Button
 @onready var button2 = $Panel/Button2
+@onready var text_timer = $Panel/TextTimer
 
 var dialogue = {}
 var current_node = "start"
+
+#two vars below are for typewriter effet 
+var full_text = ""
+var current_char = 0
 
 func _ready():
 	load_dialogue()
@@ -26,7 +31,13 @@ func show_node():
 	var node = dialogue[current_node]
 
 	speaker_label.text = node["speaker"]
-	text_label.text = node["text"]
+	full_text = node["text"]
+	current_char = 0
+	text_label.text = ""
+	text_timer.start()
+	
+
+
 
 	if node.has("portrait"):
 		var resource = load(node["portrait"])
@@ -70,3 +81,10 @@ func _on_button_pressed():
 func _on_button_2_pressed():
 	current_node = dialogue[current_node]["choices"][1]["next"]
 	show_node()
+	
+func _on_text_timer_timeout():
+	if current_char < full_text.length():
+		text_label.text += full_text[current_char]
+		current_char += 1
+	else:
+		text_timer.stop()
