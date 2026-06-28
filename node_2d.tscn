@@ -5,27 +5,26 @@
 [ext_resource type="SpriteFrames" uid="uid://8mhlohmipk70" path="res://portraits/crazyAnimation.tres" id="2_epypp"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wtcfe"]
-bg_color = Color(0.45490196, 0.5764706, 0.9490196, 0.57254905)
+bg_color = Color(0, 0, 0, 0.43137255)
 
 [node name="Node2D" type="Node2D" unique_id=293164579]
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1831316642]
 script = ExtResource("1_wtcfe")
 
-[node name="Panel" type="Panel" parent="CanvasLayer" unique_id=1524215446]
-z_index = 10
-offset_left = 1233.0
-offset_top = 783.0
-offset_right = 1891.0
-offset_bottom = 1037.0
-theme_override_styles/panel = SubResource("StyleBoxFlat_wtcfe")
-
-[node name="Portrait" type="AnimatedSprite2D" parent="CanvasLayer/Panel" unique_id=1256972654]
+[node name="Portrait" type="AnimatedSprite2D" parent="CanvasLayer" unique_id=1256972654]
 z_as_relative = false
-position = Vector2(-273.00006, -243.49998)
+position = Vector2(952.99994, 536.5)
 scale = Vector2(0.99999994, 0.9990741)
 sprite_frames = ExtResource("2_epypp")
 animation = &"idle"
+
+[node name="Panel" type="Panel" parent="CanvasLayer" unique_id=1524215446]
+z_index = 10
+offset_top = 961.0
+offset_right = 1080.0
+offset_bottom = 1921.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_wtcfe")
 
 [node name="Label" type="Label" parent="CanvasLayer/Panel" unique_id=779042973]
 z_as_relative = false
@@ -34,22 +33,24 @@ offset_left = 50.0
 offset_top = 44.0
 offset_right = 581.0
 offset_bottom = 103.0
-theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_color = Color(1, 1, 1, 0.99215686)
+theme_override_colors/font_shadow_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 0.99215686)
 theme_override_font_sizes/font_size = 32
 
 [node name="Button" type="Button" parent="CanvasLayer/Panel" unique_id=1029610557]
 layout_mode = 0
-offset_left = 197.0
-offset_top = 182.0
-offset_right = 271.0
-offset_bottom = 227.0
+offset_left = 383.0
+offset_top = 876.0
+offset_right = 457.0
+offset_bottom = 921.0
 
 [node name="Button2" type="Button" parent="CanvasLayer/Panel" unique_id=437971941]
 layout_mode = 0
-offset_left = 359.0
-offset_top = 179.0
-offset_right = 429.0
-offset_bottom = 223.0
+offset_left = 627.0
+offset_top = 874.0
+offset_right = 697.0
+offset_bottom = 918.0
 
 [node name="SpeakerLabel" type="Label" parent="CanvasLayer/Panel" unique_id=309035851]
 layout_mode = 0
@@ -60,7 +61,7 @@ offset_bottom = 28.0
 theme_override_font_sizes/font_size = 24
 
 [node name="TextTimer" type="Timer" parent="CanvasLayer/Panel" unique_id=1705655132]
-wait_time = 0.030000000000000002
+wait_time = 0.03
 
 [node name="MusicPlayer" type="AudioStreamPlayer" parent="CanvasLayer" unique_id=1774135482]
 stream = ExtResource("2_0e48y")

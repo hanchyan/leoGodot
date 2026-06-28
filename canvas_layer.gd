@@ -1,7 +1,7 @@
 extends CanvasLayer
 
 @onready var music = $MusicPlayer
-@onready var portrait = $Panel/Portrait
+@onready var portrait = $Portrait
 @onready var speaker_label = $Panel/SpeakerLabel
 @onready var text_label = $Panel/Label
 @onready var button1 = $Panel/Button

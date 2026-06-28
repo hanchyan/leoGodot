@@ -1,7 +1,6 @@
 {
   "start": {
 	"speaker": "Old Man",
-	"portrait": "res://portraits/old_man2.png",
 	"text": "Do you enter the cave?",
 	"choices": [
 	  {
@@ -16,9 +15,7 @@
   },
 
   "cave": {
-	"speaker": "Narrator",
-	"portrait": "res://portraits/test.png",
-	 
+	"speaker": "Narrator",	 
 	"text": "It's dark inside. Continue?",
 	"choices": [
 	  {
@@ -35,7 +32,6 @@
   "leave": {
 	"speaker": "Narrator",
 	"text": "poo poo",
-	"portrait": "res://portraits/caveExit.png",
 	"choices": []
   },
 
@@ -56,8 +52,16 @@
 
   "crazy": {
 	"speaker": "Narrator",
-	"text": "this shits bananas",
-	"portrait": "res://portraits/crazyAnimation.tres",
+	"text": "this shits bananas
+	this shits bananas
+	this shits bananas
+	this shits bananas
+	this shits bananas
+	this shits bananas
+	this shits bananas
+	this shits bananas
+	
+	",
 
 	"choices": [
 		{
